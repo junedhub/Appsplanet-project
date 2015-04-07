@@ -1,47 +1,105 @@
 <div class="row" ng-init="mapService.initialize()">
     <div class="bg_div">
-        <div class="col-md-5">
+        <div class="col-md-7">
             <md-content md-theme="docs-dark" class="md-padding" layout-sm="column" style="font-size:1.0em">
+
+            <div layout layout-sm="column">
                 <md-input-container class="md-docs-dark-theme">
-                    <label><i class="fa fa-home"></i> from:</label>
+                    <label>from:</label>
                     <input type="text" options="options2" ng-model="mapService.initial_loc" ng-autocomplete="mapService.initial_loc" ng-mouseenter="mapService.calcRoute()" ng-change="mapService.calcRoute()" Required/>
                 </md-input-container>
-                
-                <md-input-container>
-                    <label><i class="fa fa-home"></i> to:</label>
-                    <input type="text" options="options2" ng-model="mapService.end_loc" ng-autocomplete="mapService.end_loc" ng-mouseenter="mapService.calcRoute()" ng-change="mapService.calcRoute()" required/>
-                </md-input-container>
-                <datepicker date-format="MM/dd/yyyy" date-min-limit="{{currentdate.now() | date:'MM/dd/yyyy'}}">
-                    <input ng-model="date" type="text" placeholder="&#61447;Choose a date" class="font-fontawesome font-light radius3 form-control"/>
-                </datepicker><br><br>
-                <b>can a moving truck park outside your house?</b>
-                <div layout="row">
-                    <md-radio-group>
-                        <md-radio-button value="yes" class="md-primary">yes</md-radio-button>
-                        <span><md-radio-button class="md-primary" value="no">no</md-radio-button>
-                        <md-radio-button  class="md-primary" value="don't know">don't know</md-radio-button>
-                    </md-radio-group>
-                </md-content>
-                </div>
-            </md-content>    
-        </div>
-        <div class="col-md-2">
-            <md-content md-theme="docs-dark" class="md-padding" layout-sm="column" style="font-size:1.1em">
-                <md-input-container>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <md-input-container>
                     <label>zipcode:</label>
                     <input placeholder="zip-code" ng-model="zipfrom" maxlength="6" minlength="6" Required/>
                 </md-input-container>
+            </div>
+
+             <div layout layout-sm="column">
+                <md-input-container>
+                    <label>to:</label>
+                    <input type="text" options="options2" ng-model="mapService.end_loc" ng-autocomplete="mapService.end_loc" ng-mouseenter="mapService.calcRoute()" ng-change="mapService.calcRoute()" required/>
+                </md-input-container>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <md-input-container>
                     <label>zipcode:</label>
                     <input type="text" placeholder="zip-code" ng-model="zip" maxlength="6" minlength="6" Required/>
                 </md-input-container>
+            </div>
 
-            </md-content>
+            
+                <datepicker date-format="dd/MM/yyyy" date-min-limit="">
+                 Moving Date:<input ng-model="date" type="text">
+                </datepicker>
+           <br><br><br><br>
+      
+<label>For Source:</label>
+               <div layout layout-sm="column">
+                <md-input-container>
+        
+                    <b>can a moving truck park outside your house?</b>
+                    <section layout="row">
+                        <span><md-checkbox class="md-primary">yes</md-checkbox></span>
+                        <md-checkbox class="md-primary">no</md-checkbox>
+                        <md-checkbox class="md-primary">don't know</md-checkbox>
+                    </section>
+                </md-input-container>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <md-input-container>
+                    <b>can have access to lift?</b>
+                    <section layout="row">
+                        <span>
+                            <md-checkbox class="md-primary">yes</md-checkbox>
+                        </span>
+                        <md-checkbox class="md-primary">no</md-checkbox>
+                        <md-checkbox class="md-primary">don't know</md-checkbox>
+                    </section>
+                    </md-input-container>
+                </div>
+
+            
+                
+<label>For Destination:</label>
+                <div layout layout-sm="column">
+                <md-input-container>
+
+                    <b>can a moving truck park outside your house?</b>
+                    <section layout="row">
+                        <span><md-checkbox class="md-primary">yes</md-checkbox></span>
+                        <md-checkbox class="md-primary">no</md-checkbox>
+                        <md-checkbox class="md-primary">don't know</md-checkbox>
+                    </section>
+                </md-input-container>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <md-input-container>
+                    <b>can have access to lift?</b>
+                    <section layout="row">
+                        <span>
+                            <md-checkbox class="md-primary">yes</md-checkbox>
+                        </span>
+                        <md-checkbox class="md-primary">no</md-checkbox>
+                        <md-checkbox class="md-primary">don't know</md-checkbox>
+                    </section>
+                    </md-input-container>
+                    </div>
+                
+
+
+            
+            </md-content>    
         </div>
+      
+            
+               
+                
+
+        
+    
         <div class="col-md-5">
             <div id="map-canvas"></div>
             {{mapService.calcRoute().distance}}
             Total Distance:<b ng-cloak> {{mapService.distance}}</b>
         </div>    
     </div>
+    <div pickadate default-date>
 </div>

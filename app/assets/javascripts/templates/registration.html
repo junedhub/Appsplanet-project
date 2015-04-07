@@ -14,9 +14,12 @@
   <div class="bg_div">
     <!-- + Registration Form Heading -->
     <md-toolbar md-theme="docs-dark">
-      <h1 class="md-toolbar-tools">Registration Form</h1>
+      <h1 class="md-toolbar-tools heading">Customer Registration Form</h1>
     </md-toolbar><!-- + End Of Registration Form heading -->   
+
     <div class="col-md-8"><!-- Sepration Div(Registration Form) -->
+     <md-card>
+      <md-card-content>      
       <div layout="column">
         <md-content md-theme="docs-dark" class="md-padding" layout="row" layout-sm="column" style="font-size:1.1em">
           <form name="ClientForm">
@@ -31,7 +34,7 @@
                 <input input="text" name="lastname" ng-model="lastName" placeholder="Enter LastName" ng-model-options="{debounce: 750}" ng-required="true" minlength="3" ng-pattern="/^[a-zA-Z]{3,20}$/">
                 <div ng-show="!ClientForm.lastname.$pristine" ng-messages="ClientForm.lastname.$error" ng-messages-include="my-messages.html"></div>
               </md-input-container>
-              <md-input-container ng-if="uistate.current.name !== 'home.registration'">
+              <md-input-container ng-if="idfire.current.name !== 'registration'">
                 <label>Company Name*<i ng-show="ClientForm.cname.$valid && !ClientForm.cname.$pristine" class="fa fa-check fa-stack-1x"></i></label>
                 <input input="text" name="cname" ng-model="companyname" placeholder="Enter Company Name" ng-model-options="{debounce: 750}" ng-required="true" minlength="3" ng-pattern="/^[a-zA-Z]{3,20}$/">
                 <div ng-show="!ClientForm.cname.$pristine" ng-messages="ClientForm.cname.$error" ng-messages-include="my-messages.html"></div>
@@ -52,9 +55,16 @@
                 </div>
               </md-input-container>
             </div>
-            <div layout layout-sm="column">
-              
-              
+
+            <div layout layout-sm="column">  
+              <ui-select ng-model="state.selected" theme="bootstrap" class="state">
+                <ui-select-match placeholder="Select state...">
+                {{$select.selected.name}}
+                </ui-select-match>
+                <ui-select-choices repeat="state in states | filter: $select.search">
+                {{state.name}}
+                </ui-select-choices>
+              </ui-select>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
               <md-select placeholder="City" ng-model="someval">
                 <md-option value="2" ng-selected="selected">select</md-option>
@@ -62,7 +72,7 @@
                 </md-option>
               </md-select>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <md-input-container flex>
+              <md-input-container flex class="pincode">
                 <label>Pincode*<i ng-show="ClientForm.pincode.$valid && !ClientForm.pincode.$pristine" class="fa fa-check fa-stack-1x"></i></label>
                 <input type="text" ng-model="pincode" name="pincode" ui-mask="{{pattern_pin}}" required />
                 <div  ng-show="!ClientForm.pincode.$pristine" ng-messages="ClientForm.pincode.$error" ng-messages-include="my-messages.html">
@@ -104,13 +114,15 @@
           <p class='bold_text'>Sign in with :</p>
           <div class="fb_tw_go_btns">
             <section layout="row">
-              <img src="assets/Button-login-with-facebook.png" width="200px">
+              <img src="assets/facebook.jpg" height="100px" width="100px">
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <img src="assets/google+.png" height="100px" width="100px">
             </section><br>
+            <br>
             <section layout="row">
-              <img src="assets/sign-in-button.png" height='40px' width="200px">
-            </section><br>
-            <section layout="row">
-              <img src="assets/u_twitter_login_button.png" width='200px' height='40px'>
+              <img src="assets/Social-Truck_linkedin2.png" height="100px" width="100px">
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="assets/twitter.png" height="100px" width="100px">
             </section>
           </div>
         </md-card-content>
@@ -121,11 +133,3 @@
 
 
 
-<ui-select ng-model="state.selected" theme="bootstrap">
-                <ui-select-match placeholder="Select state...">
-                {{$select.selected.name}}
-                </ui-select-match>
-                <ui-select-choices repeat="state in states | filter: $select.search">
-                {{state.name}}
-                </ui-select-choices>
-              </ui-select>
