@@ -3,12 +3,12 @@
         <div class="col-md-5">
             <md-content md-theme="docs-dark" class="md-padding" layout-sm="column" style="font-size:1.0em">
                 <md-input-container class="md-docs-dark-theme">
-                    <label>from:</label>
+                    <label><i class="fa fa-home"></i> from:</label>
                     <input type="text" options="options2" ng-model="mapService.initial_loc" ng-autocomplete="mapService.initial_loc" ng-mouseenter="mapService.calcRoute()" ng-change="mapService.calcRoute()" Required/>
                 </md-input-container>
                 
                 <md-input-container>
-                    <label>to:</label>
+                    <label><i class="fa fa-home"></i> to:</label>
                     <input type="text" options="options2" ng-model="mapService.end_loc" ng-autocomplete="mapService.end_loc" ng-mouseenter="mapService.calcRoute()" ng-change="mapService.calcRoute()" required/>
                 </md-input-container>
                 <datepicker date-format="MM/dd/yyyy" date-min-limit="{{currentdate.now() | date:'MM/dd/yyyy'}}">

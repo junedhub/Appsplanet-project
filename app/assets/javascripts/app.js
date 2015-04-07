@@ -18,6 +18,7 @@ var bookmymove = angular.module('bookmymove',[
   'named-views.vendor',
   'named-views.map',
   'named-views.feedback',
+  'named-views.adminPanel'
 ]);
 bookmymove.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$mdThemingProvider', function($stateProvider, $urlRouterProvider, $locationProvider,$mdThemingProvider){
 	$stateProvider.state('home',{
@@ -33,10 +34,6 @@ bookmymove.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
           templateUrl: 'footer.html'
         }
       }   
-    }).state('feedback', {
-      url: '/feedback',
-      templateUrl: 'feedback.html',
-      controller: 'feedbackCtrl'
     })
   ;
   $urlRouterProvider.otherwise('/');
