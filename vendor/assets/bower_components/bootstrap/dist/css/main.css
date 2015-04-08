@@ -1,5 +1,70 @@
+/*--------------------------------------------------------------------------
++ Vendor Home Page Style
+--------------------------------------------------------------------------*/
+.vendor-input
+{
+  margin-top:20px;
+}
 
+.vendor-homepg-label 
+{
+    color: #FBD00E;
+    font-family: "PT Sans",sans-serif,arial;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+}
 
+.vendor-homepg-login-btn
+{
+    background-color: #FBD00E;
+    border: 0px none;
+    color: #00496B;
+    font-family: "PT Sans",sans-serif,arial;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+ .vendor-homepg-header 
+ {
+    background-color:  #0A3151;
+    border: 0px none;
+    border-radius: 0px;
+    margin-bottom: -20px;
+    min-height: 100px;
+}
+
+ .navbar {
+    background-color: #0A3151;
+    border: 0px none;
+    border-radius: 0px;
+    margin-bottom: -20px;
+    min-height: 40px;
+}
+
+.home-banner {
+  background-color:#013C57;
+    height: 300px;
+}
+
+.banner-content {
+    width: 600px;
+    margin: 0px auto;
+    padding-top: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.home-banner h2 {
+    color: #FFF;
+    font-family: "PT Sans",sans-serif,arial;
+    font-style: normal;
+    font-size: 42px;
+    font-weight: 700;
+}
 /*--------------------------------------------------------------------------
 +	Main Menu Style
 --------------------------------------------------------------------------*/
