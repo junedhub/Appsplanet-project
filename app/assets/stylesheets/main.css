@@ -1,4 +1,99 @@
 
+/*--------------------------------------------------------------------------
++ Vendor Home Page Style
+--------------------------------------------------------------------------*/
+.vendor-input
+{
+  margin-top:10px;
+  width: 100%;
+}
+
+.vendor-homepg-label 
+{
+    color: #FBD00E;
+    font-family: "PT Sans",sans-serif,arial;
+    font-size: 16px;
+    
+}
+
+.vendor-homepg-login-btn
+{
+    background-color: #FBD00E;
+    border: 0px none;
+    color: #00496B;
+    font-family: "PT Sans",sans-serif,arial;
+    font-style: normal;
+    font-size: 16px;
+    font-weight:bold;
+}
+.vendor-homepg-selling-btn
+{
+    background-color: #FBD00E;
+    border-radius:5px;
+    padding: 10px; 
+    color: #00496B;
+    font-family: "PT Sans",sans-serif,arial;
+    font-style: normal;
+    font-size: 16px;
+    font-weight:bold;
+    width: 25%;
+    margin-left: 200px;
+}
+
+
+ .vendor-homepg-header 
+ {
+    background-color: #005387;;
+    border: 0px none;
+    border-radius: 0px;
+    margin-bottom: -20px;
+    min-height: 100px;
+}
+
+ .navbar {
+    background-color: #0A3151;
+    border: 0px none;
+    border-radius: 0px;
+    margin-bottom: -20px;
+    min-height: 40px;
+}
+
+.home-banner
+ {
+  background-color:#013C57;    
+    height: 300px;
+}
+
+.banner-content {
+    width: 700px;
+    margin: 0px auto;
+    padding-top: 30px;
+  
+}
+
+.text-center {
+    text-align: center;
+}
+
+.home-banner h2 {
+  margin-top: 10px;
+    color:#FFF;
+    font-family: "PT Sans",sans-serif,arial;
+    font-style: normal;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.home-banner h3 {
+    color: #ACD9FF;
+    font-family: "PT Sans",sans-serif,arial;
+    font-style: normal;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+}
 
 /*--------------------------------------------------------------------------
 +	Main Menu Style
@@ -19,6 +114,9 @@
 
 .mainmenu-wrapper
  {
+  background: url(".jpg");
+  background-attachment: fixed;
+  background-color: #FFF;
   border-bottom: 4px solid #009688;
   z-index: 4;
 }
@@ -477,7 +575,7 @@ Quotation
 
 .bg_image
 {
-background: url("pattern2.png");
+background: url("page-background.png");
 background-attachment: fixed;
 }
 
@@ -494,12 +592,12 @@ width:250px;
 	width:-900px;
 	background-color:#fff;
 	border-radius:15px;
-	margin-top: 70px;
+	margin-top: 60px;
 	margin-left: 30PX;
-margin-right: 30PX;
-background-attachment: local;
-
+  margin-right: 30PX;
 }
+
+
 
 .left_side_img
 {
@@ -575,10 +673,9 @@ font-weight: 575;
 
 footer
 {
-position:absolute;
-margin-top:50px;
+margin-top:30px;
 width:100%;
-height:150px;
+height:250px;
 background:#009688;
 }
 
