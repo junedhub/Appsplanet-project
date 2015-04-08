@@ -1,3 +1,14 @@
+<!--+ Header(BreadCrumbs)-->
+<div class="section section-breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Please provide some of our basic moving info</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- + Registration Form -->
 <div class="row" ng-init="mapService.initialize()">
     <div class="bg_div">
         <div class="col-md-7">
@@ -28,8 +39,8 @@
             </div>
 
             
-                <datepicker date-format="dd/MM/yyyy" date-min-limit="">
-                 Moving Date:<input ng-model="date" type="text">
+                <datepicker date-format="MM/dd/yyyy" date-min-limit="{{currentdate.now() | date:'MM/dd/yyyy'}}">
+                    <input ng-model="date" type="text" placeholder="&#61447;Choose a date" class="font-fontawesome font-light radius3 form-control"/>
                 </datepicker>
            <br><br><br><br>
       
@@ -46,13 +57,17 @@
                 </md-input-container>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                  <md-input-container>
-                    <b>can have access to lift?</b>
+                    <b>will the movers have access to these?</b>
                     <section layout="row">
-                        <span>
-                            <md-checkbox class="md-primary">yes</md-checkbox>
+                        <md-radio-group>
+                            <span>
+                                <md-radio-button  value="yes" class="md-primary">yes</md-radio-button>
+                            </span>
+                            <span>
+                            <md-radio-button class="md-primary" value="no">no</md-radio-button>
                         </span>
-                        <md-checkbox class="md-primary">no</md-checkbox>
-                        <md-checkbox class="md-primary">don't know</md-checkbox>
+                            <md-checkbox class="md-primary">don't know</md-checkbox>
+                        </md-radio-group>
                     </section>
                     </md-input-container>
                 </div>
@@ -72,7 +87,7 @@
                 </md-input-container>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <md-input-container>
-                    <b>can have access to lift?</b>
+                    <b>will the movers have access to these?</b>
                     <section layout="row">
                         <span>
                             <md-checkbox class="md-primary">yes</md-checkbox>

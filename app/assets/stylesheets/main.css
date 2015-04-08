@@ -19,6 +19,7 @@
 
 .mainmenu-wrapper
  {
+  background-color: #FFF;
   border-bottom: 4px solid #009688;
   z-index: 4;
 }
@@ -490,7 +491,7 @@ width:250px;
 
 .bg_div
 {
-	height:450px;
+	height:515px;
 	width:-900px;
 	background-color:#fff;
 	border-radius:15px;
@@ -576,9 +577,9 @@ font-weight: 575;
 footer
 {
 position:absolute;
-margin-top:50px;
+margin-top:0px;
 width:100%;
-height:150px;
+height:195px;
 background:#009688;
 }
 
