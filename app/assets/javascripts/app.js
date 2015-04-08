@@ -176,11 +176,15 @@ $scope.password = '';
 $scope.confirmpassword = '';
 $scope.companyname= '';
 $scope.state = {};
+
 if ($state.current.name !== 'home.registration') {
-$scope.userType = 'vendor';
+  $scope.userType = 'vendor';
+  $scope.headingTop = 'Please Register Here With Us To Start Your Business';
 }else{
-$scope.userType = 'Client';
+  $scope.userType = 'Client';
+  $scope.headingTop = 'Please Register Here To Starting Booking With Us';
 };
+
 console.log('userType: '+ $scope.userType);
 $scope.cities = [
     { name: 'Pune'},
