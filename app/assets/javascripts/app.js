@@ -18,7 +18,9 @@ var bookmymove = angular.module('bookmymove',[
   'named-views.vendor',
   'named-views.map',
   'named-views.feedback',
-  'named-views.adminPanel'
+  'named-views.adminPanel',
+  'named-views.quotation',
+  'named-views.vendorhomepg'
 ]);
 bookmymove.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$mdThemingProvider', function($stateProvider, $urlRouterProvider, $locationProvider,$mdThemingProvider){
 	$stateProvider.state('home',{
